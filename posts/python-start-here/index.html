@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Python without fuss - Sci Vim 5</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Sci Vim 5" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Sci Vim 5</div>
+					<div class="logo__tagline">Exploring my curiosity</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Python without fuss</h1>
+			<p class="post__lead">Start here: identifiers, basic math and data types</p>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class="meta__icon icon icon-calendar" width="18" height="16" 
+	 viewBox="0 0 458 458" style="enable-background:new 0 0 458 458;" xml:space="preserve">
+<g>
+	<path d="M111.938,135.598c11.046,0,20-8.954,20-20V21.597c0-11.046-8.954-20-20-20s-20,8.954-20,20v94.001
+		C91.938,126.644,100.892,135.598,111.938,135.598z"/>
+	<path d="M346.063,135.598c11.046,0,20-8.954,20-20V21.597c0-11.046-8.954-20-20-20s-20,8.954-20,20v94.001
+		C326.063,126.644,335.017,135.598,346.063,135.598z"/>
+	<path d="M443,82.403h-46.938c0,12.42,0,20.918,0,33.195c0,27.614-22.386,50-50,50c-27.614,0-50-22.386-50-50
+		c0-12.281,0-20.771,0-33.195H161.938c0,12.42,0,20.918,0,33.195c0,27.614-22.386,50-50,50c-27.614,0-50-22.386-50-50
+		c0-12.281,0-20.771,0-33.195H15c-8.284,0-15,6.716-15,15v89.641h458V97.403C458,89.119,451.284,82.403,443,82.403z"/>
+	<path d="M0,441.403c0,8.284,6.716,15,15,15h428c8.284,0,15-6.716,15-15V227.044H0V441.403z M244.191,313.046
+		c0-6.036,3.59-11.504,9.127-13.907c7.49-3.249,16.316-9.028,21.176-13.393c2.782-2.499,6.38-3.88,10.121-3.88h19.254
+		c4.395,0,7.957,3.563,7.957,7.958v80.903h11.445c8.275,0,14.984,6.708,14.984,14.984c0,8.275-6.708,14.984-14.984,14.984h-59.934
+		c-8.275,0-14.984-6.708-14.984-14.984c0-8.275,6.708-14.984,14.984-14.984h14.567V317.66c-2.163,2.886-6.797,6.077-12.243,8.754
+		c-4.618,2.27-10.076,2.008-14.445-0.711c-4.369-2.718-7.025-7.501-7.025-12.647V313.046z M123.295,390.677
+		c2.691-29.175,18.127-37.168,47.125-52.83c4.622-2.493,12.811-7.06,15.92-11.134c3.842-5.044,1.97-18.001-14.359-18.001
+		c-5.549,0-11.094,1.106-17.704,5.967c-6.262,4.605-14.984,3.637-20.067-2.244l-0.594-0.688c-3.026-3.501-4.246-8.216-3.31-12.747
+		s3.925-8.371,8.09-10.387c22.329-10.811,56.654-13.101,73.853,0.952c7.977,6.523,11.966,15.332,11.966,26.43
+		c0,32.434-40.129,38.997-54.315,54.731h41.622c8.275,0,14.984,6.708,14.984,14.984c0,8.275-6.708,14.984-14.984,14.984h-79.1
+		c-2.577,0-5.036-1.095-6.772-3C123.914,395.789,123.059,393.243,123.295,390.677z"/>
+</g>
+</svg>
+<time class="meta__text" datetime="2023-04-28T12:16:48&#43;05:30">April 28, 2023</time></div>
+<div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/python-programming/" rel="category">python programming</a>
+	</span>
+</div><div class="meta__item-categories meta__item">
+	<span class="meta__text">
+		<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>3939 words/19 min read
+	</span>
+</div>
+</div>
+		</header>
+		
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+	<details>
+	<summary>Click to toggle</summary>
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#your-python3-environment">Your Python3 environment</a></li>
+    <li><a href="#comments-in-python-code">Comments in Python code</a></li>
+    <li><a href="#identifiers">Identifiers</a></li>
+    <li><a href="#arithmetic-operations">Arithmetic operations</a>
+      <ul>
+        <li><a href="#exponentiation">Exponentiation</a></li>
+      </ul>
+    </li>
+    <li><a href="#data-types">Data Types</a>
+      <ul>
+        <li><a href="#strings">Strings</a></li>
+        <li><a href="#numbers">Numbers</a></li>
+        <li><a href="#bool">Bool</a></li>
+        <li><a href="#complex">Complex</a></li>
+      </ul>
+    </li>
+    <li><a href="#data-structures">Data Structures</a>
+      <ul>
+        <li><a href="#a-list">A List</a></li>
+        <li><a href="#a-tuple">A Tuple</a></li>
+        <li><a href="#sets">Sets</a></li>
+        <li><a href="#dictionary">Dictionary</a></li>
+      </ul>
+    </li>
+    <li><a href="#logical-operations">Logical Operations</a>
+      <ul>
+        <li><a href="#comparison-operators">Comparison Operators</a></li>
+      </ul>
+    </li>
+    <li><a href="#your-turn-now">Your turn now!</a></li>
+    <li><a href="#strings--their-operations">Strings &amp; Their Operations</a>
+      <ul>
+        <li><a href="#operations--operators">Operations &amp; Operators</a></li>
+        <li><a href="#symbolic-operators-that-work-with-strings">Symbolic Operators that work with Strings:</a></li>
+        <li><a href="#concatenation">Concatenation</a></li>
+        <li><a href="#multiplication">Multiplication</a></li>
+        <li><a href="#subscripting">Subscripting</a></li>
+        <li><a href="#slicing">Slicing</a></li>
+        <li><a href="#what-if-m--n">What if (m = n)?</a></li>
+        <li><a href="#what-if-m--n-1">What if (m &gt; n)?</a></li>
+        <li><a href="#three-indexes-in-string-slicing-syntax-mno">Three indexes in String Slicing Syntax (m:n:o)</a></li>
+        <li><a href="#lexical-comparison-in-python">Lexical Comparison in Python</a></li>
+      </ul>
+    </li>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#test-your-understanding">Test Your Understanding</a></li>
+  </ul>
+</nav>
+	</details>
+	</div>
+</div>
+
+<div class="content post__content clearfix">
+			<style>
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 36px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  background-color: #444;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+#myBtn:hover {
+  background-color: #C154C1;
+}
+</style>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">&#9757;</button>
+
+
+<script>
+
+let mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+
+<p>Python is a flexible programming language that has been accepted for research
+in the life sciences especially to organise and make sense of the huge amount of data
+already available and also generated daily.</p>
+<h2 id="introduction">Introduction</h2>
+<p>The main reasons for the popularity of Python are:</p>
+<ul>
+<li>its abilities to process, analyse and visualize data.</li>
+<li>it is easy to learn, and</li>
+<li>it lets users accomplish tasks with few lines of code</li>
+</ul>
+<p>In this lesson you will get introduced to basic concepts for programming with Python.</p>
+<p>At the end of this session, you&rsquo;ll know:</p>
+<ul>
+<li>Basic data types</li>
+<li>Data structures</li>
+<li>Basic operations on these data structures</li>
+<li>Reading user input and printing results</li>
+</ul>
+<!--
+The interactive nature of this notebook lets you follow along with your own code and try out new things with Python. You will hear people referring to Python as Python3. Python3 is the latest version of Python and the one we are using.
+Required Basic Ideas in Python
+
+    Identifiers
+    Numbers
+    Strings
+    Lists
+    Tuples
+    Sets
+    Dictionaries
+    Control structures
+    
+    -- For following classes
+    Functions
+    Modules and importing
+    
+    -- Advanced
+    OOP
+    Classes
+    
+-->
+<h2 id="your-python3-environment">Your Python3 environment</h2>
+<p>You would usually have Python3 installed on your computer. All you need to do is
+start a terminal and run <code>python3</code> at the prompt. This should start the python3
+interpreter for you.</p>
+<p>For some, a more convenient option could be an online python playground such as
+<a href="https://playground.programiz.com/">this one</a>.</p>
+<h2 id="comments-in-python-code">Comments in Python code</h2>
+<p>Comments are a very important part of your Python code file.  They are not run as code
+but they are shown alongside your code.  They explain to you and to users of your code,
+what you are trying to accomplish with the code. They should be informative and brief.</p>
+<p>Single-line comments begin with a hash <code>#</code>.
+Multi-line comments begin and end with triple quotes <code>&quot;&quot;&quot;</code>. We will see comments in
+action in the following sections.</p>
+<h2 id="identifiers">Identifiers</h2>
+<p>A Python identifier is a name used to identify any object. A valid identifier can begin with any letter (A to Z or a to z) or an underscore(_)that is followed by a letter or number(0 to 9).  An identifier is a proxy for a python object and can be used to represent and manipulate it throughout the python program space.</p>
+<p>Punctuation symbols such as <code>-, @, $, %</code> are not allowed within Python identifier names. Python is a <strong>case-sensitive programming</strong> language; hence, <code>aa</code>,<code>Aa</code>,<code>AA</code> are all distinct identifiers in Python. Given below are the naming conventions for Python identifiers that coordinate with the syntax:</p>
+<blockquote>
+<p><strong>Identifier naming conventions and restrictions</strong> 💡⚠️</p>
+<ul>
+<li>Class names begin with an upper-case letter; all other identifiers can start with a lower-case letter.</li>
+<li>The beginning of an identifier with one underscore represents a private identifier.</li>
+<li>The beginning of an identifier with two underscores represents an extremely private identifier.</li>
+<li>If the identifier also ends with two underscores, it indicates a language-defined special name.</li>
+<li>The camel case style names identifiers thus: <code>NumberOfStudents</code> and the underscore style would name
+the same identifier as <code>number_of_students</code>.  You can pick either but follow it consistently.</li>
+<li><em><strong>Do not name identifiers after Python keywords or built-ins.</strong></em></li>
+</ul>
+</blockquote>
+<p>Don&rsquo;t worry if a few terms sound unfamiliar, we will explore them later.</p>
+<h2 id="arithmetic-operations">Arithmetic operations</h2>
+<p>Before we go into data types, let us understand arithmetic operations with a data type we all understand &ndash; numbers. The python code is self-explanatory.  But before that note that a <code>=</code> means <em><strong>assignment</strong></em> and
+an <code>==</code> means <em><strong>equality</strong></em>.  Ignoring or not appreciating this can lead to some hard-to-catch problems
+in your programs.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x, y <span style="color:#666">=</span> <span style="color:#666">3</span>, <span style="color:#666">4</span>   <span style="color:#408080;font-style:italic"># Python allows multiple assignments!</span>
+a, b <span style="color:#666">=</span> <span style="color:#666">5</span>, <span style="color:#666">2</span>   <span style="color:#408080;font-style:italic"># a is assigned 5, b is assigned 2</span>
+
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#34;Sum of x and y: &#34;</span>,x<span style="color:#666">+</span>y)  <span style="color:#408080;font-style:italic"># Addition</span>
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#34;Difference of x and y: &#34;</span>, x<span style="color:#666">-</span>y)  <span style="color:#408080;font-style:italic"># Subtraction</span>
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#34;Product of a and b: &#34;</span>, a<span style="color:#666">*</span>b)  <span style="color:#408080;font-style:italic"># Product</span>
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#34;Integer quotient of a and b: &#34;</span>, a<span style="color:#666">//</span>b) <span style="color:#408080;font-style:italic"># Note the // operator for integer division</span>
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#34;Floating point quotient of a and b: &#34;</span>, a<span style="color:#666">/</span>b)  <span style="color:#408080;font-style:italic"># Floating point division</span>
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#34;--------------------------&#34;</span>)
+
+<span style="color:#408080;font-style:italic"># Floating point numbers</span>
+e <span style="color:#666">=</span> <span style="color:#666">4e-2</span>; f <span style="color:#666">=</span> <span style="color:#666">1e-5</span> <span style="color:#408080;font-style:italic"># product of a mantissa and 10 raised to an exponent</span>
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#34;Floating point quotient of e and f: &#34;</span>, e<span style="color:#666">/</span>f)  <span style="color:#408080;font-style:italic"># Floating point division</span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>Sum of x and y:  7
+Difference of x and y:  -1
+Product of a and b:  10
+Integer quotient of a and b:  2
+Floating point quotient of a and b:  2.5
+--------------------------
+Floating point quotient of e and f:  3999.9999999999995
+</code></pre><p>You might have expected 4000 as the answer (and correctly so) but floating point calculations have small rounding errors that are unavoidable. Python offers the round() function to round decimals to a certain precision. For instance, the following code snippet rounds our quotient to two places of decimal.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#34;Floating point quotient of e and f: &#34;</span>, <span style="color:#008000">round</span>(e<span style="color:#666">/</span>f,<span style="color:#666">2</span>))  <span style="color:#408080;font-style:italic"># Floating point division</span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>Floating point quotient of e and f:   4000.0
+</code></pre><blockquote>
+<p>⚠️ <strong>Division by <code>0</code> is invalid and can cause your program to terminate immediately.</strong> We will learn how to catch such &lsquo;exceptions&rsquo; as Python calls them.</p>
+</blockquote>
+<h3 id="exponentiation">Exponentiation</h3>
+<p>Python allows to raise one number to the power of another.  Let us look
+at some examples of the type \(x^y\).</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">print</span>(<span style="color:#666">2</span><span style="color:#666">**</span><span style="color:#666">5</span>)  <span style="color:#408080;font-style:italic"># 2 to the power of 5</span>
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#666">0.5</span><span style="color:#666">**</span><span style="color:#666">3</span>) <span style="color:#408080;font-style:italic"># 0.5 to the power 3</span>
+
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#666">1e-3</span><span style="color:#666">**</span><span style="color:#666">2</span>) <span style="color:#408080;font-style:italic"># 10 to the power -3 raised to 2</span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>32
+0.125
+1e-06
+</code></pre><h2 id="data-types">Data Types</h2>
+<p>Python has simple and composite data types.  We will look at the simple data types
+first:</p>
+<ul>
+<li>str (the string datatype)</li>
+<li>int (the integer datatype)</li>
+<li>float (the floating point number datatype)</li>
+<li>bool (the Boolean datatype), and</li>
+<li>complex (the complex datatype)</li>
+</ul>
+<p>Run the following code in your python environment:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python3" data-lang="python3"><span style="color:#008000">print</span>(<span style="color:#008000">type</span>(<span style="color:#ba2121">&#34;Hello World&#34;</span>), <span style="color:#008000">type</span>(<span style="color:#008000;font-weight:bold">False</span>), <span style="color:#008000">type</span>(<span style="color:#666">10</span>), <span style="color:#008000">type</span>(<span style="color:#666">4.0</span>), <span style="color:#008000">type</span>(<span style="color:#008000">complex</span>(<span style="color:#666">1</span>,<span style="color:#666">1</span>)))
+</code></pre></div><p>You will see the following output:</p>
+<pre><code>&lt;class 'str'&gt; &lt;class 'bool'&gt; &lt;class 'int'&gt; &lt;class 'float'&gt; &lt;class 'complex'&gt;
+</code></pre><p>This means the string &ldquo;Hello World&rdquo; is of class <em><strong>str</strong></em>(String), the value <code>False</code>
+which is truth condition is of class <em><strong>bool</strong></em>(Boolean), and so on.  A confusion may
+arise regarding class and type; they will mean the same for us.</p>
+<h3 id="strings">Strings</h3>
+<p><strong>Strings</strong> are quite commonly used data type in any programming application, and Python has good support
+for them. Plainly explained, strings are printable characters shown within quotes.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#408080;font-style:italic"># A string-syntax sample in Python:</span>
+example <span style="color:#666">=</span> <span style="color:#ba2121">&#34;Sample string&#34;</span>
+<span style="color:#008000;font-weight:bold">print</span>(example)
+</code></pre></div><p>String objects support a lot of operations on them. We will examine these when we look at composite
+data types later.</p>
+<h3 id="numbers">Numbers</h3>
+<p>We have already looked at the <code>int</code> and <code>float</code> types earlier.</p>
+<h3 id="bool">Bool</h3>
+<p>The <code>bool</code> type represents the truth value of a condition &ndash; i.e. is the condition <code>True</code> or <code>False</code>.</p>
+<pre><code>print(5 &gt; 3)  # Is 5 greater than 3? True
+print(0 == 1)  # Is 1 equal to 0?  False
+</code></pre><pre><code>True
+False
+</code></pre><h3 id="complex">Complex</h3>
+<p>For those of us who use complex numbers, Python also has complex data type. You can skip this
+part if it is not applicable to you.</p>
+<p>A python interpreter session showing complex numbers:</p>
+<pre><code>&gt;&gt;&gt; z = complex(3,4)
+&gt;&gt;&gt; z
+(3+4j)
+&gt;&gt;&gt; print(z)
+(3+4j)
+&gt;&gt;&gt; print(z.conjugate())
+(3-4j)
+&gt;&gt;&gt; print(z*z.conjugate())
+(25+0j)
+&gt;&gt;&gt; 
+
+</code></pre><blockquote>
+<p><strong>Getting help in Python</strong> If you are running the Python interpreter, typing
+<code>help()</code> will get you into the <em>help</em> mode. Thereafter, you can follow instructions
+or type a specific keyword to get more help on that keyword.  Alternatively, you
+can head over to the python <a href="https://docs.python.org/">documentation site</a>.</p>
+</blockquote>
+<hr>
+<h2 id="data-structures">Data Structures</h2>
+<p>The four sub-sections given below (<em>Lists, Tuples, Sets</em> and <em>Dictionaries</em>) can more appropriately
+be called composite data types or data structures.  These are built into Python and are also called
+built-ins.  Data structures organize data so that it can be used well by the corresponding program or application.</p>
+<p>We will look at some basic operations on these data structures and reserve some more advanced
+operations for a later time.</p>
+<h3 id="a-list">A List</h3>
+<p><em>Lists</em> are sequential data structures. Every element of a list is naturally given an index number(starting from 0). Each member can be accessed using the index.  Examples of a list:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">example2<span style="color:#666">=</span> [<span style="color:#ba2121">&#34;Rollno&#34;</span>, <span style="color:#ba2121">&#34;Name&#34;</span>, <span style="color:#ba2121">&#34;score&#34;</span>, <span style="color:#ba2121">&#34;average&#34;</span>] <span style="color:#408080;font-style:italic">#string list</span>
+
+rollno<span style="color:#666">=</span> [<span style="color:#666">20</span>,<span style="color:#666">40</span>,<span style="color:#666">130</span>,<span style="color:#666">243</span>,<span style="color:#666">513</span>] <span style="color:#408080;font-style:italic">#roll-number list</span>
+score<span style="color:#666">=</span> [<span style="color:#666">90</span>,<span style="color:#666">80</span>,<span style="color:#666">89</span>,<span style="color:#666">75</span>,<span style="color:#666">89</span>]
+rollno[<span style="color:#666">4</span>]  <span style="color:#408080;font-style:italic"># prints 513. Remember! indexing starts from 0.</span>
+
+expr<span style="color:#666">=</span> example2[<span style="color:#666">3</span>]      <span style="color:#408080;font-style:italic">#Code for access of a specific element within given list</span>
+<span style="color:#008000;font-weight:bold">print</span>(expr)
+L<span style="color:#666">=</span> <span style="color:#008000">len</span>(rollno)
+avg<span style="color:#666">=</span> <span style="color:#008000">sum</span>(score)<span style="color:#666">/</span>L      <span style="color:#408080;font-style:italic">#Calculation using the list</span>
+<span style="color:#008000;font-weight:bold">print</span>(avg)
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>average
+84.6
+</code></pre><h3 id="a-tuple">A Tuple</h3>
+<p><em>Tuples</em> are similar to lists, but their content cannot be altered after creation. In other words,
+a tuple is non-mutable. While creating a tuple, round braces are used instead of square ones. If the data needs to be kept in the the read-only format, a format of tuples can be used for data representation. Given below is an example of a tuple:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">rollno <span style="color:#666">=</span> (<span style="color:#666">20</span>,<span style="color:#666">40</span>,<span style="color:#666">130</span>,<span style="color:#666">243</span>,<span style="color:#666">513</span>)    <span style="color:#408080;font-style:italic">#roll-number tuple</span>
+<span style="color:#008000;font-weight:bold">print</span>(rollno[<span style="color:#666">3</span>])
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>243
+</code></pre><p><strong>Invalid Changes&hellip;</strong></p>
+<pre><code>rollno[3] = 244                  # gives an error!! Tuples cannot be changed
+</code></pre><p>Lists as well as tuples can contain not just numbers or strings, but another data structure
+including itself.  See the example below:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#408080;font-style:italic"># A list of lists</span>
+list_of_lists <span style="color:#666">=</span> [[<span style="color:#ba2121">&#39;A&#39;</span>,<span style="color:#ba2121">&#34;B&#34;</span>], [<span style="color:#666">1</span>,<span style="color:#666">2</span>,<span style="color:#666">3</span>]]
+tuple_of_lists <span style="color:#666">=</span> ([[<span style="color:#ba2121">&#39;A&#39;</span>,<span style="color:#ba2121">&#34;B&#34;</span>], [<span style="color:#666">1</span>,<span style="color:#666">2</span>,<span style="color:#666">3</span>]], [<span style="color:#ba2121">&#34;Sun&#34;</span>,<span style="color:#ba2121">&#34;Mon&#34;</span>])
+<span style="color:#008000;font-weight:bold">print</span>(list_of_lists)
+<span style="color:#008000;font-weight:bold">print</span>(tuple_of_lists)
+</code></pre></div><pre><code>list_of_lists = [['A',&quot;B&quot;], [1,2,3]]
+tuple_of_lists = ([['A',&quot;B&quot;], [1,2,3]], [&quot;Sun&quot;,&quot;Mon&quot;])
+print(list_of_lists)
+print(tuple_of_lists)
+</code></pre><h3 id="sets">Sets</h3>
+<p>A set is another data collection like a list. But, it is unordered and cannot have duplicate items. Unlike lists, no index number can be used to refer to any item of a set. All you can do is check the membership of an item in a set.</p>
+<p><em>A Set display</em>: Comma-separated values and the curly brackets({}) indicate a set; the brackets enclose the elements of the set.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000">set</span>(<span style="color:#ba2121">&#39;TCAGTTAT&#39;</span>)           <span style="color:#408080;font-style:italic">#An alphabetically organized set of elements (Result in Python3):</span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>{'A',  'C',  'G',  'T'}
+</code></pre><p>Converting the string &lsquo;TCAGTTAT&rsquo; to a set removed all the duplicates and gave us the unique items(characters) in the string. You will note that sets are represented as comma-separated items, enclosed in curly brackets. You can also create a set by enclosing a comma-separated list of items in curly brackets as follows:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">another_set <span style="color:#666">=</span> {<span style="color:#ba2121">&#39;A&#39;</span>,<span style="color:#ba2121">&#39;A&#39;</span>,<span style="color:#ba2121">&#39;C&#39;</span>,<span style="color:#ba2121">&#39;G&#39;</span>,<span style="color:#ba2121">&#39;T&#39;</span>}
+another_set
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>{'A', 'C', 'G', 'T'}
+</code></pre><p>Note how duplicate items show up only once in a set.
+To create an empty set, do the following:</p>
+<pre><code>empty = set()
+empty
+</code></pre><p><strong>Output&hellip;</strong></p>
+<pre><code>set()
+</code></pre><h3 id="dictionary">Dictionary</h3>
+<p>A <em>dictionary</em> is a data structure with pairs of keys and values in which every value corresponds to a particular key and the value can eventually be accessed using the key. Unlike a list, a key can be
+an alphanumeric string.  Keys have to be unique.  The given code-example represents a key/value pairing syntax:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">example4<span style="color:#666">=</span>{<span style="color:#ba2121">&#34;Rollno&#34;</span>:<span style="color:#666">513</span>, <span style="color:#ba2121">&#34;Name&#34;</span>:<span style="color:#ba2121">&#34;Shobha&#34;</span>, <span style="color:#ba2121">&#34;score&#34;</span>:<span style="color:#666">75</span>, <span style="color:#ba2121">&#34;total&#34;</span>:<span style="color:#666">93</span>}
+<span style="color:#008000;font-weight:bold">print</span>(example2[<span style="color:#666">2</span>])
+<span style="color:#008000;font-weight:bold">print</span>(example2[<span style="color:#666">3</span>])
+<span style="color:#008000;font-weight:bold">print</span>(example4[<span style="color:#ba2121">&#34;Name&#34;</span>])
+<span style="color:#008000;font-weight:bold">print</span>(example4[<span style="color:#ba2121">&#34;score&#34;</span>])
+<span style="color:#008000;font-weight:bold">print</span>(example4[<span style="color:#ba2121">&#34;total&#34;</span>])
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>score
+average
+Shobha
+75
+93
+</code></pre><h2 id="logical-operations">Logical Operations</h2>
+<p>Logical operations evaluate truth value of expressions.  For instance the expression
+<code>a == 5</code> has a truth value depending on whether <code>a</code> is indeed equal to 5 (<code>True</code>) or
+not (<code>False</code>).  The standard Boolean operators are <strong>not</strong>, <strong>and</strong>, and <strong>or</strong>.</p>
+<p>Given below is a list of operators that can be used for Boolean Expressions.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#408080;font-style:italic">#Opposite results</span>
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#a2f;font-weight:bold">not</span> True)  <span style="color:#408080;font-style:italic"># False</span>
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#a2f;font-weight:bold">not</span> False) <span style="color:#408080;font-style:italic"># True</span>
+
+<span style="color:#408080;font-style:italic">#Valid Set of Options only when All are True.   </span>
+<span style="color:#008000;font-weight:bold">print</span>(True <span style="color:#a2f;font-weight:bold">and</span> True) <span style="color:#408080;font-style:italic"># True</span>
+<span style="color:#008000;font-weight:bold">print</span>(True <span style="color:#a2f;font-weight:bold">and</span> False) <span style="color:#408080;font-style:italic"># False</span>
+<span style="color:#008000;font-weight:bold">print</span>(False <span style="color:#a2f;font-weight:bold">and</span> False) <span style="color:#408080;font-style:italic"># False</span>
+
+<span style="color:#408080;font-style:italic">#Options provided from which a True option is preferred to be the result.</span>
+<span style="color:#008000;font-weight:bold">print</span>(True <span style="color:#a2f;font-weight:bold">or</span> True) <span style="color:#408080;font-style:italic"># True                 </span>
+<span style="color:#008000;font-weight:bold">print</span>(True <span style="color:#a2f;font-weight:bold">or</span> False) <span style="color:#408080;font-style:italic"># True</span>
+<span style="color:#008000;font-weight:bold">print</span>(False <span style="color:#a2f;font-weight:bold">or</span> True) <span style="color:#408080;font-style:italic"># True</span>
+<span style="color:#008000;font-weight:bold">print</span>(False <span style="color:#a2f;font-weight:bold">or</span> False) <span style="color:#408080;font-style:italic"># False</span>
+</code></pre></div><p>An interesting property of the <code>True</code> and <code>False</code> constants is that they evaluate to <code>1</code> and
+<code>0</code> respectively. For instance the following code:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">print</span>([<span style="color:#ba2121">&#34;Impossible!&#34;</span>, <span style="color:#ba2121">&#34;That is correct&#34;</span>][<span style="color:#666">5</span><span style="color:#666">&gt;</span><span style="color:#666">3</span>])
+<span style="color:#008000;font-weight:bold">print</span>([<span style="color:#ba2121">&#34;Impossible!&#34;</span>, <span style="color:#ba2121">&#34;That is correct&#34;</span>][<span style="color:#666">1</span><span style="color:#666">&lt;</span><span style="color:#666">0</span>])
+</code></pre></div><p>would print</p>
+<pre><code>That is correct
+Impossible!
+</code></pre><p>We can use this property to pick an item from a list depending on the truth
+value of an expression as we have done here. It is a handy trick for programming.</p>
+<h3 id="comparison-operators">Comparison Operators</h3>
+<p>Six valid <em>Comparison Operators</em> (evaluating to Boolean values) exist apart from Boolean Operators. The list of symbols that give Boolean Results is as follows: <code>==, &gt;, &gt;=, !=, &lt;=, &lt;</code>.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#666">3</span> <span style="color:#666">==</span> <span style="color:#666">7</span><span style="color:#666">//</span><span style="color:#666">2</span>  <span style="color:#408080;font-style:italic">#checks if the first given value is equal to the quotient of the latter calculation</span>
+<span style="color:#666">4</span> <span style="color:#666">&gt;</span> <span style="color:#666">14</span><span style="color:#666">%</span><span style="color:#666">5</span>   <span style="color:#408080;font-style:italic">#checks if the former value is greater than the remainder of the latter calculation</span>
+
+<span style="color:#408080;font-style:italic">#symbol checks inequality or disparity</span>
+<span style="color:#ba2121">&#39;five&#39;</span> <span style="color:#666">!=</span> <span style="color:#ba2121">&#39;three&#39;</span>
+<span style="color:#ba2121">&#39;two&#39;</span> <span style="color:#666">!=</span> <span style="color:#ba2121">&#39;two&#39;</span> 
+
+<span style="color:#408080;font-style:italic">#Given Output represents the Final Result of the last example.</span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>False
+</code></pre><h2 id="your-turn-now">Your turn now!</h2>
+<p>Do this short quiz to test your understanding.</p>
+<ol>
+<li>
+<p>Add 1 and 2.5. What do you get?</p>
+</li>
+<li>
+<p>Subtract 2 from 4. What is the difference?</p>
+</li>
+<li>
+<p>Multiply 3 with 5.2. What is the product?</p>
+</li>
+<li>
+<p>Divide 9.1 by 4. What is the quotient?</p>
+</li>
+</ol>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#408080;font-style:italic"># Your code here (as u like)!!!</span>
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#666">1</span><span style="color:#666">+</span><span style="color:#666">2.5</span>)         <span style="color:#408080;font-style:italic">#(1.)</span>
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#666">4</span><span style="color:#666">-</span><span style="color:#666">2</span>)           <span style="color:#408080;font-style:italic">#(2.)</span>
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#666">3</span><span style="color:#666">*</span><span style="color:#666">5.2</span>)         <span style="color:#408080;font-style:italic">#(3.)</span>
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#666">9.1</span><span style="color:#666">/</span><span style="color:#666">4</span>)         <span style="color:#408080;font-style:italic">#(4.)</span>
+</code></pre></div><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#666">3.5</span>      			<span style="color:#408080;font-style:italic">#(1.)</span>
+<span style="color:#666">2</span>                   <span style="color:#408080;font-style:italic">#(2.)</span>
+<span style="color:#666">15.600000000000001</span>  <span style="color:#408080;font-style:italic">#(3.)</span>
+<span style="color:#666">2.275</span>    			<span style="color:#408080;font-style:italic">#(4.)</span>
+</code></pre></div><h2 id="strings--their-operations">Strings &amp; Their Operations</h2>
+<p>Strings are the most commonly used data type in any programming language, including Python. Plainly explained, strings are printable characters shown within quotes.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#408080;font-style:italic"># A string-syntax sample in Python:</span>
+example <span style="color:#666">=</span> <span style="color:#ba2121">&#34;Sample string&#34;</span>
+<span style="color:#008000;font-weight:bold">print</span>(example)
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>Sample string
+</code></pre><h3 id="operations--operators">Operations &amp; Operators</h3>
+<p>Four binary operators act on strings: <code>in, not in, +</code> and <code>*</code>.</p>
+<p>The first two operators &ndash; evaluating to <code>True</code> or <code>False</code> &ndash; check for the existence of a one
+string in another.  The <code>+</code> operator is used to concatenate(join) two or more strings.  The<br>
+fourth operator <code>*</code> is used for string repetition.</p>
+<p>Here are examples of valid applications of such string operators:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#408080;font-style:italic">#checks Presence of former string(codon) within latter one(genetic sequence) at last line</span>
+<span style="color:#008000;font-weight:bold">print</span>((<span style="color:#ba2121">&#39;AGT&#39;</span> <span style="color:#a2f;font-weight:bold">in</span> <span style="color:#ba2121">&#39;ACGCATAGTCATG&#39;</span>))   
+<span style="color:#008000;font-weight:bold">print</span>((<span style="color:#ba2121">&#39;ATT&#39;</span> <span style="color:#a2f;font-weight:bold">in</span> <span style="color:#ba2121">&#39;ACGCATAGTCATG&#39;</span>))
+<span style="color:#008000;font-weight:bold">print</span>((<span style="color:#ba2121">&#39;ATT&#39;</span> <span style="color:#a2f;font-weight:bold">not</span> <span style="color:#a2f;font-weight:bold">in</span> <span style="color:#ba2121">&#39;ACGCATAGTCATG&#39;</span>))
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>True
+False
+True
+</code></pre><h3 id="symbolic-operators-that-work-with-strings">Symbolic Operators that work with Strings:</h3>
+<p>These are examples of symbolic operations we can perform on strings:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">str1 <span style="color:#666">=</span> <span style="color:#ba2121">&#34;Hello&#34;</span>; str2 <span style="color:#666">=</span> <span style="color:#ba2121">&#34;World&#34;</span>
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#34;Concatenation: &#34;</span>, str1<span style="color:#666">+</span><span style="color:#ba2121">&#34; &#34;</span><span style="color:#666">+</span>str2) <span style="color:#408080;font-style:italic"># Note the insertion of a blank space between words</span>
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#34;Case conversion: &#34;</span>, str1<span style="color:#666">.</span>upper()<span style="color:#666">+</span><span style="color:#ba2121">&#34; &#34;</span><span style="color:#666">+</span>str2<span style="color:#666">.</span>upper())
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#34;String reversal: &#34;</span>, str1[::<span style="color:#666">-</span><span style="color:#666">1</span>] <span style="color:#666">+</span> <span style="color:#ba2121">&#34; &#34;</span> <span style="color:#666">+</span> str2[::<span style="color:#666">-</span><span style="color:#666">1</span>]) <span style="color:#408080;font-style:italic"># Reverse and then concatenate</span>
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#34;String reversal: &#34;</span>, (str1 <span style="color:#666">+</span> <span style="color:#ba2121">&#34; &#34;</span> <span style="color:#666">+</span> str2)[::<span style="color:#666">-</span><span style="color:#666">1</span>]) <span style="color:#408080;font-style:italic"># Concatenate and then reverse</span>
+
+<span style="color:#408080;font-style:italic"># We will have to wait a bit to understand this &#39;strange&#39; notation</span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>Concatenation:  Hello World
+Case conversion:  HELLO WORLD
+String reversal:  olleH dlroW
+String reversal:  dlroW olleH
+</code></pre><h3 id="concatenation">Concatenation</h3>
+<p><strong>Concatenation</strong> is the process that joins or links strings(sequences) end to end.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ba2121">&#39;TC&#39;</span><span style="color:#666">+</span><span style="color:#ba2121">&#39;AG&#39;</span>     <span style="color:#408080;font-style:italic">#Short Sequence pair Concatenation</span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>'TCAG'
+</code></pre><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ba2121">&#39;ttt&#39;</span> <span style="color:#666">+</span> <span style="color:#ba2121">&#39;ccc&#39;</span> <span style="color:#666">+</span> <span style="color:#ba2121">&#39;aaa&#39;</span> <span style="color:#666">+</span> <span style="color:#ba2121">&#39;ggg&#39;</span>  <span style="color:#408080;font-style:italic">#Lower Case Longer Sequence Concatenation </span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>'tttcccaaaggg'
+</code></pre><h3 id="multiplication">Multiplication</h3>
+<p>A string can be repeated a specific number of times by <em>multiplying</em> it by an integer:</p>
+<p><strong>A Commutative Process that occurs in any Order</strong></p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#39;TC&#39;</span> <span style="color:#666">*</span> <span style="color:#666">12</span>) 
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#666">6</span> <span style="color:#666">*</span> <span style="color:#ba2121">&#39;TC&#39;</span>)
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>TCTCTCTCTCTCTCTCTCTCTCTC
+TCTCTCTCTCTC
+</code></pre><p>Printing a decorated horizontal rule can be as elegant as:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#39;&lt;&#39;</span><span style="color:#666">*</span><span style="color:#666">30</span>,<span style="color:#ba2121">&#39;-..-&#39;</span><span style="color:#666">*</span><span style="color:#666">5</span>,<span style="color:#ba2121">&#39;&gt;&#39;</span><span style="color:#666">*</span><span style="color:#666">30</span>)
+</code></pre></div><pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; -..--..--..--..--..- &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+</code></pre><p>Imagine having to type this keeping count of characters on your own.</p>
+<h3 id="subscripting">Subscripting</h3>
+<p><em>Subscripting</em> pulls out one element/character of a string. The extraction is depicted with a pair of square brackets enclosing an integer-valued expression called an index. The first element in the sequence is at position 0(not 1).</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#408080;font-style:italic">#Sequence Slicing Syntax(Python3 with sequence of amino acids) </span>
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#39;MNKMDLVADVAEKTDLSKAKATEVIDAVFA&#39;</span>[<span style="color:#666">0</span>])
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#39;MNKMDLVADVAEKTDLSKAKATEVIDAVFA&#39;</span>[<span style="color:#666">-</span><span style="color:#666">1</span>])
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#39;MNKMDLVADVAEKTDLSKAKATEVIDAVFA&#39;</span>[<span style="color:#666">-</span><span style="color:#666">2</span>])
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>M
+A
+F
+</code></pre><p>As we can see, the index can also be a negative number, in which case the index is counted from the end of the string. The last element is at index −1, the last-but-one is at -2, and so on.</p>
+<h3 id="slicing">Slicing</h3>
+<p><em>Slicing</em> is a process that pulls out substrings from a string. The process is often used to clearly and briefly indicate parts of strings. The element locations of a slice are indicated by two or optionally three integers within square brackets, separated by colons. The first index represents the start location or  the first element of the slice. The second index represents the slice end-point; but, the element at that location is excluded from the slice.</p>
+<p>A slice <code>[m:n]</code> would hence be read as <em>starting from position <code>m</code> up to but excluding position <code>n</code>.</em>
+An optional third index indicates the stride of the slice. It defaults to 1 if it is omitted.  Some examples will make this clearer.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">seq <span style="color:#666">=</span> [<span style="color:#666">0</span>,<span style="color:#666">1</span>,<span style="color:#666">2</span>,<span style="color:#666">3</span>,<span style="color:#666">4</span>,<span style="color:#666">5</span>,<span style="color:#666">6</span>,<span style="color:#666">7</span>,<span style="color:#666">8</span>,<span style="color:#666">9</span>]
+<span style="color:#008000;font-weight:bold">print</span>(seq[<span style="color:#666">0</span>:<span style="color:#666">4</span>],seq[<span style="color:#666">0</span>:<span style="color:#666">9</span>:<span style="color:#666">2</span>],seq[<span style="color:#666">1</span>:<span style="color:#666">9</span>:<span style="color:#666">2</span>])
+</code></pre></div><pre><code>[0, 1, 2, 3] [0, 2, 4, 6, 8] [1, 3, 5, 7]
+# Respectively 0 to 3, 0 to 8 and 1 to 8 with stride of 2
+</code></pre><p>Here are some more examples.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#408080;font-style:italic"># Sequence Slicing Syntax</span>
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#39;MNKMDLVADVAEKTDLSKAKATEVIDAVFA&#39;</span>[<span style="color:#666">1</span>:<span style="color:#666">8</span>])
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#39;MNKMDLVADVAEKTDLSKAKATEVIDAVFA&#39;</span>[<span style="color:#666">7</span>:<span style="color:#666">-</span><span style="color:#666">1</span>])
+<span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#39;MNKMDLVADVAEKTDLSKAKATEVIDAVFA&#39;</span>[<span style="color:#666">-</span><span style="color:#666">4</span>:<span style="color:#666">-</span><span style="color:#666">3</span>]) 
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>NKMDLVA
+ADVAEKTDLSKAKATEVIDAVF
+A
+</code></pre><p>Slicing is an important aspect in handling strings and lists in Python and you will need to
+practice quite a bit before you get it right.  We examine and re-examine some special cases
+to  cement our understanding.</p>
+<h3 id="what-if-m--n">What if (m = n)?</h3>
+<p>When both index numbers for a sequence are equal, the final result for string slicing is usually an empty string:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ba2121">&#39;MNKMDLVADVAEKTDLSKAKATEVIDAVFA&#39;</span>[<span style="color:#666">7</span>:<span style="color:#666">7</span>] <span style="color:#408080;font-style:italic">#An example: m = n</span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>''
+</code></pre><h3 id="what-if-m--n-1">What if (m &gt; n)?</h3>
+<p>When both index numbers for a sequence are not clearly defined(i.e m &gt; n), the final result for string slicing here too is an empty string:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ba2121">&#39;MNKMDLVADVAEKTDLSKAKATEVIDAVFA&#39;</span>[<span style="color:#666">-</span><span style="color:#666">7</span>:<span style="color:#666">-</span><span style="color:#666">9</span>] <span style="color:#408080;font-style:italic">#An example: m &gt; n</span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>''
+</code></pre><p>If you intend to slice from the beginning or up to the end of a string, that corresponding entry of the slice notation may be omitted. Consider the fact that omitting the second index is not the same as providing <code>−1</code> as the second index. Omitting the second index says to go up to the end of the string, upto and including the last element; whereas −n (negative n) means go up to and including the
+n<sup>th</sup> element from the end:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ba2121">&#39;MNKMDLVADVAEKTDLSKAKATEVIDAVFA&#39;</span>[:<span style="color:#666">-</span><span style="color:#666">1</span>]
+<span style="color:#408080;font-style:italic">#Result:Entire sequence,excluding the last n element(s).</span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>'MNKMDLVADVAEKTDLSKAKATEVIDAVF'
+</code></pre><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ba2121">&#39;MNKMDLVADVAEKTDLSKAKATEVIDAVFA&#39;</span>[:<span style="color:#666">8</span>]
+<span style="color:#408080;font-style:italic">#Result:First n element(s) of given sequence.</span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>'MNKMDLVA'
+</code></pre><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ba2121">&#39;MNKMDLVADVAEKTDLSKAKATEVIDAVFA&#39;</span>[<span style="color:#666">7</span>:]
+<span style="color:#408080;font-style:italic">#Result:Excluding First m element(s) of given sequence.</span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>'ADVAEKTDLSKAKATEVIDAVFA'
+</code></pre><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ba2121">&#39;MNKMDLVADVAEKTDLSKAKATEVIDAVFA&#39;</span>[<span style="color:#666">7</span>:<span style="color:#666">-</span><span style="color:#666">1</span>]
+<span style="color:#408080;font-style:italic">#Result:Excluding First m and last n element(s) of given sequence.</span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>'ADVAEKTDLSKAKATEVIDAVF'
+</code></pre><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ba2121">&#39;MNKMDLVADVAEKTDLSKAKATEVIDAVFA&#39;</span>[:]
+<span style="color:#408080;font-style:italic">#Result: Entire string (for no index)</span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>'MNKMDLVADVAEKTDLSKAKATEVIDAVFA'
+</code></pre><hr>
+<h3 id="three-indexes-in-string-slicing-syntax-mno">Three indexes in String Slicing Syntax (m:n:o)</h3>
+<p>As explained before, the final sequence result starts from element m(start index), ends at n(stop index) and contains every o<sup>th</sup> element of the given sequence (between m and n).The third index(o) shows the number of elements to skip after each one that is taken, known as a step. When the third index is absent, as usual, the default step is 1, meaning no skip. An example:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ba2121">&#39;MNKMDLVADVAEKTDLSKAKATEVIDAVFA&#39;</span>[<span style="color:#666">0</span>:<span style="color:#666">9</span>:<span style="color:#666">2</span>]
+<span style="color:#408080;font-style:italic">#Result: Every even(second) element between m(0) and n(9).</span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>'MKDVD'
+</code></pre><p><strong>What for a Negative Step(o)?</strong></p>
+<p>The step(o) may be a negative integer. When the step is negative,the slice takes elements from the sequence in reverse order. In order to get a valid result, when a negative step is given, the start index should be greater than the stop index(i.e m &gt; n). The final result excludes element at the stop index(n).</p>
+<p><strong>What if the Stop Index(n) is not given?</strong></p>
+<p>When the Stop index is absent, a longer sequence (with a negative step) is made as the final result in this case.</p>
+<p><strong>What if the First Index(m) is absent?</strong></p>
+<p>When the Start index is not there, the slicing protocol(with a negative step) begins from the last element.
+Entire Sequence Reversal</p>
+<p>An entirely reversed sequence can be produced by ensuring the absence of two indexes(m and n), along with the presence of a negative step.</p>
+<p>Diverse Examples for a Negative Step:</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ba2121">&#39;MNKMDLVADVAEKTDLSKAKATEVIDAVFA&#39;</span>[<span style="color:#666">15</span>:<span style="color:#666">0</span>:<span style="color:#666">-</span><span style="color:#666">3</span>]
+<span style="color:#408080;font-style:italic">#Result:Every third, backward element between m(15) and n(0)</span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>'LKVVM'
+</code></pre><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ba2121">&#39;MNKMDLVADVAEKTDLSKAKATEVIDAVFA&#39;</span>[<span style="color:#666">15</span>::<span style="color:#666">-</span><span style="color:#666">3</span>] <span style="color:#408080;font-style:italic"># No Stop Index</span>
+<span style="color:#408080;font-style:italic">#Result:Longer sequence with same rules</span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>'LKVVMM'
+</code></pre><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000;font-weight:bold">print</span>(<span style="color:#ba2121">&#39;MNKMDLVADVAEKTDLSKAKATEVIDAVFA&#39;</span>[:<span style="color:#666">26</span>:<span style="color:#666">-</span><span style="color:#666">1</span>]) <span style="color:#408080;font-style:italic"># No First Index</span>
+seq <span style="color:#666">=</span> [<span style="color:#666">0</span>,<span style="color:#666">1</span>,<span style="color:#666">2</span>,<span style="color:#666">3</span>,<span style="color:#666">4</span>,<span style="color:#666">5</span>,<span style="color:#666">6</span>,<span style="color:#666">7</span>,<span style="color:#666">8</span>,<span style="color:#666">9</span>]
+<span style="color:#008000;font-weight:bold">print</span>(seq[:<span style="color:#666">5</span>:<span style="color:#666">-</span><span style="color:#666">1</span>]) <span style="color:#408080;font-style:italic"># print upto 5th element </span>
+<span style="color:#408080;font-style:italic"># Result:Slicing from the end, upto and excluding n&#39;th element from the beginning</span>
+<span style="color:#408080;font-style:italic"># of sequence in reverse direction.</span>
+<span style="color:#008000;font-weight:bold">print</span>(seq[:<span style="color:#666">5</span>:<span style="color:#666">-</span><span style="color:#666">1</span>]) <span style="color:#408080;font-style:italic"># print upto 5th element in reverse from end</span>
+<span style="color:#008000;font-weight:bold">print</span>(seq[<span style="color:#666">-</span><span style="color:#666">4</span>:<span style="color:#666">-</span><span style="color:#666">7</span>:<span style="color:#666">-</span><span style="color:#666">1</span>])   <span style="color:#408080;font-style:italic"># [6,5,4]</span>
+<span style="color:#008000;font-weight:bold">print</span>(seq[<span style="color:#666">-</span><span style="color:#666">4</span>:<span style="color:#666">-</span><span style="color:#666">7</span>])   <span style="color:#408080;font-style:italic"># []</span>
+<span style="color:#008000;font-weight:bold">print</span>(seq[<span style="color:#666">-</span><span style="color:#666">7</span>:<span style="color:#666">-</span><span style="color:#666">4</span>]) <span style="color:#408080;font-style:italic"># [3,4,5]</span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>'AFV'
+[9, 8, 7, 6]
+[6, 5, 4]
+[]
+[3, 4, 5]
+</code></pre><div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ba2121">&#39;MNKMDLVADVAEKTDLSKAKATEVIDAVFA&#39;</span>[::<span style="color:#666">-</span><span style="color:#666">1</span>] <span style="color:#408080;font-style:italic"># Only Third Index</span>
+<span style="color:#408080;font-style:italic">#Result:Entirely reversed sequence</span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>'AFVADIVETAKAKSLDTKEAVDAVLDMKNM'
+</code></pre><p>The slice syntax, again, is <code>start : end : stride</code>. Omitting the <code>start</code>
+implies beginning of the string, omitting the <code>end</code> implies the end of
+the string and omitting <code>stride</code> implies a stride of 1. A negative stride
+denotes reversing the string. Thus, a slice <code>[:::]</code> would print the whole
+string, <code>[1:]</code> would print the string from index 1 to the end with a
+stride of 1, etc.</p>
+<p>You can also create a slice and use it  with a list.</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">slc <span style="color:#666">=</span> <span style="color:#008000">slice</span>(<span style="color:#666">1</span>,<span style="color:#666">5</span>,<span style="color:#666">2</span>)
+<span style="color:#008000;font-weight:bold">print</span>(seq[slc])
+</code></pre></div><pre><code>[1, 3]
+</code></pre><blockquote>
+<p><strong>A parting case of string slicing</strong>
+Suppose we have this list <code>[0,1,2,3,4,5,6,7,8,9]</code> that we want to slice.
+The slice we want is <code>[8,7,6]</code>.  What should be the values of <em>m</em>, <em>n</em>, and
+<em>o</em>?</p>
+<ul>
+<li>The &lsquo;start&rsquo; of slice is <code>8</code>. We can access it in two ways: from the left
+its index is <code>8</code> from the right, it is <code>-2</code>.  <em>m</em> can take any of these two
+values. Similary, <code>5</code>(not <code>6</code> &ndash; remember: the last index is excluded) is the &lsquo;end&rsquo; of our slice. We can access it as <code>5</code> or <code>-5</code> from the left or right
+respectively. <em>n</em> can take any of these two values. Since we want a reversed
+slice, our stride, <em>o</em>, has to be negative.  So, it turns out that there are four string slice specifications that will give us the slice <code>[8,7,6]</code>. Let us try it out below.</li>
+</ul>
+</blockquote>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">seq <span style="color:#666">=</span> [<span style="color:#666">0</span>,<span style="color:#666">1</span>,<span style="color:#666">2</span>,<span style="color:#666">3</span>,<span style="color:#666">4</span>,<span style="color:#666">5</span>,<span style="color:#666">6</span>,<span style="color:#666">7</span>,<span style="color:#666">8</span>,<span style="color:#666">9</span>]
+<span style="color:#408080;font-style:italic"># for the slice [8,7,6]:</span>
+<span style="color:#408080;font-style:italic"># start or m is either 8 or -2</span>
+<span style="color:#408080;font-style:italic"># end or n is either 5 or -5</span>
+<span style="color:#408080;font-style:italic"># stride or o is -1 since we want a reversed string</span>
+
+<span style="color:#008000;font-weight:bold">print</span>(seq[<span style="color:#666">8</span>:<span style="color:#666">5</span>:<span style="color:#666">-</span><span style="color:#666">1</span>]) <span style="color:#408080;font-style:italic"># any of these give you [8,7,6]</span>
+<span style="color:#008000;font-weight:bold">print</span>(seq[<span style="color:#666">8</span>:<span style="color:#666">-</span><span style="color:#666">5</span>:<span style="color:#666">-</span><span style="color:#666">1</span>])
+<span style="color:#008000;font-weight:bold">print</span>(seq[<span style="color:#666">-</span><span style="color:#666">2</span>:<span style="color:#666">5</span>:<span style="color:#666">-</span><span style="color:#666">1</span>])
+<span style="color:#008000;font-weight:bold">print</span>(seq[<span style="color:#666">-</span><span style="color:#666">2</span>:<span style="color:#666">-</span><span style="color:#666">5</span>:<span style="color:#666">-</span><span style="color:#666">1</span>])
+</code></pre></div><pre><code>[8, 7, 6]
+[8, 7, 6]
+[8, 7, 6]
+[8, 7, 6]
+</code></pre><h3 id="lexical-comparison-in-python">Lexical Comparison in Python</h3>
+<p>This process involves a set of string elements. The <em>lexical</em> sort or comparison of each string element in a set is done on the basis of its name (<em>ascending alphabetical</em> order).</p>
+<div class="highlight"><pre style=";-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">arr <span style="color:#666">=</span> [<span style="color:#ba2121">&#39;one&#39;</span>, <span style="color:#ba2121">&#39;two&#39;</span>, <span style="color:#ba2121">&#39;three&#39;</span>,<span style="color:#ba2121">&#39;four&#39;</span>,<span style="color:#ba2121">&#39;five&#39;</span>,<span style="color:#ba2121">&#39;six&#39;</span>,<span style="color:#ba2121">&#39;seven&#39;</span>,<span style="color:#ba2121">&#39;eight&#39;</span>]
+arr<span style="color:#666">.</span>sort()
+<span style="color:#008000;font-weight:bold">print</span>(arr)     <span style="color:#408080;font-style:italic">#final output based on ascending alphabetical lexical sort of given word array.</span>
+
+<span style="color:#ba2121">&#39;three&#39;</span> <span style="color:#666">&gt;</span> <span style="color:#ba2121">&#39;eight&#39;</span>   <span style="color:#408080;font-style:italic">#comparison based on lexical properties of both words in sorted array.</span>
+</code></pre></div><p><strong>Output&hellip;</strong></p>
+<pre><code>['eight', 'five', 'four', 'one', 'seven', 'six', 'three', 'two']
+
+True
+</code></pre><p>The lexical sort order is the dictionary (as in English dictionary) alphabetical order.
+The word that appears later in the dictionary than another is thus <em>greater</em> than that
+word.  In the above list, <code>two</code> is greater than <code>eight</code> because it would appear after
+<code>eight</code> in a dictionary.</p>
+<!--
+In the code fragment, a string is alloted to a variable; later, the variable behaves like a repository for the string value. The remaining four given below (lists, tuples, sets and dictionaries) are used (by Python programers) as data structures instead of data types. Data structures are primary functional units that arrange data so that it can be used well by the program or application which is being dealt with. Although the coders mainly prefer using the data structures, they still need to be aware of the primary data types (Eg.numbers, strings).-->
+<!--
+## Quiz
+### Another turn for a set of subtopics -- Lists, Tuples, Sets and Dictionaries
+
+**Run this short quiz to check your understanding.**
+
+1.List all even integers between 1 and 10. What do you get?
+
+2.Give an example of consistent data in the form of a Tuple.(Do not try to change It)
+
+3.Convert any String into a Set of Letters.
+
+4.Give a dataset(keys and values) in curly brackets(Dictionary) that represents partly organized data.
+
+5.Can you show that \\((A \cup B)' = A' \cap B'\\)
+
+```python
+#Key examples related to Quiz.
+
+list = [2,4,6,8,10]
+print(' ')
+print('(1.)A list of even numbers (1-10):', list)                  
+#-------------------------------
+
+pri_col = ('Blue','Red','Green')            #Tuple with primary colours from a rainbow
+print(' ')
+print('(2.)A single member of the tuple with a specific index no.:', pri_col[1])     
+#------------------------------
+
+aaseq = '''MWNSNLPKPN AIYVYGVANA NITFFKGSDI LSYETREVLL KYFDILDKDE RSLKNALKD LEN PFGFAPYI
+RKAYEHKRNF LTTTRLKASF RPTTF'''   #Bacterial Restriction enzyme (Amino acid sequence)
+len(aaseq)                       #Length of entire string within quotes (including spaces)
+print(' ')
+print('(3.)The entire set of unique elements within a sequence:', set(aaseq))              
+#------------------------------     #Output within curly brackets
+
+aspects = {'name':'mouse', 'group':'mammal', 'genes':30000}
+print(' ')
+print('(4.) A specific Value as output by Key-mention:', aspects['group'])          
+
+                #-------------------x-------------------
+```
+**Output...**
+```
+(1.)A list of even numbers (1-10): [2, 4, 6, 8, 10]
+ 
+(2.)A single member of the tuple with a specific index no.: Red
+ 
+(3.)The entire set of unique elements within a sequence: {'N', 'W', 'K', 'P', 'V', 'H', 'L', 'I', '\n', 'S', 'Y', 'A', 'M', 'R', 'G', 'E', 'T', ' ', 'F', 'D'}
+ 
+(4.) A specific Value as output by Key-mention: mammal
+```-->
+<h2 id="summary">Summary</h2>
+<p>With its intuitive data structures, and ease of learning, Python gives us researchers the ability to view, manipulate and process our data in unique ways.</p>
+<p>What we have learned so far are basic programming concepts that we can build upon
+to gain adequate skills in Python for our day-to-day work, and develop more advanced techniques to process research data in Life Sciences or for that matter, any field of scientific endeavour.</p>
+<p>It is important to practice what we have learned so far so that we can use
+our skills to learn the next aspect of Python programming: program flow control.</p>
+<!--
+Systematic methods can be used under a useful software like Python 3 to organize data obtained for research areas. The software is related to an Object-Oriented-Programming Language with a well-defined syntax which is quite open for any modified updates. The influential updates are responsible for the creation of new versions of the software. The broadly explained and effective software version (Python 3) for research in different subject areas is certainly a recent one. The different subject areas require organized research in diverse and weighty repositories of data science. The explained software is the most helpful tool for practical usage. A life science is a good example of a diverse repository with maximum research areas that involve the application of Python 3 for the arrangement of all interesting kinds of data. The random steps for the organization of data in the life sciences are mostly non-linear and diverse. It is due to the variety of these subjects that they do not follow a single linear protocol for any activity.-->
+<h2 id="test-your-understanding">Test Your Understanding</h2>
+<ol>
+<li>
+<p>Which of the following is a valid identifier? Select all
+that apply.</p>
+<p>a. <code>2ndVariable</code>  b. <code>variable_2</code>  c. <code>AnotherVariable</code>  d. <code>print</code></p>
+</li>
+<li>
+<p>Which of the following does not give you a valid result? Why?</p>
+<p>a. <code>&quot;Hello&quot;+5</code>  b. <code>5+5</code>  c. <code>25//&quot;5&quot;</code> d. <code>&quot;Python&quot;+&quot;rocks&quot;</code></p>
+</li>
+<li>
+<p>What does the expression <code>10%2</code> mean?</p>
+<p>a. 10% of 2  b. 2% of 10  c. remainder of 10 divided by 2</p>
+</li>
+<li>
+<p>What value would <code>a</code> give?</p>
+<p><code>a = (5&gt;3)</code></p>
+</li>
+<li>
+<p>What will the following expression evaluate to?  Why?</p>
+<p><code>2**2+2</code></p>
+</li>
+<li>
+<p>Given a list <code>tups = [(1,2),[3,4]]</code> what will the expression
+<code>tups[1]</code> evaluate to?</p>
+</li>
+<li>
+<p>How many unique characters are there in the string &ldquo;Bengaluru&rdquo;?
+How will you use Python to solve this?</p>
+</li>
+<li>
+<p>Of the following two assignments, which one is a set and which one
+is a dictionary?</p>
+<p><code>s1 = {&quot;1&quot;,&quot;2&quot;,&quot;Monday&quot;,&quot;Tuesday&quot;}</code> <br>
+<code>s2 = {&quot;1&quot;:&quot;Monday, &quot;2&quot;:&quot;Tuesday&quot;}</code></p>
+</li>
+<li>
+<p>In the question above, what will <code>s2[&quot;2&quot;]</code> give you?
+What will s1[2] give you? Why?</p>
+</li>
+<li>
+<p>Can you convert the string: &ldquo;I am learning Python. Knowing it is a valuable skill.&rdquo;
+to the string: &ldquo;Knowing Python is a valuable skill.&rdquo; all in upper case using only
+slicing, concatenation and a final string operation?</p>
+</li>
+</ol>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/basic/" rel="tag">basic</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/tutorial/" rel="tag">tutorial</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2023 Apurva Talgery.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>
